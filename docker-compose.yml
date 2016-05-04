@@ -1,0 +1,21 @@
+version: '2'
+
+services:
+  seed:
+    container_name: seed1
+    hostname: seed
+    image: p4km9y/karaf-cellar-docker
+    volumes:
+      - ./deploy:/opt/deploy
+    environment:
+      - SEED_HOST=seed
+  member:
+    container_name: member1
+    hostname: member
+    image: p4km9y/karaf-cellar-docker
+    volumes:
+      - ./deploy:/opt/deploy
+    depends_on:
+      - seed
+    links:
+      - seed
