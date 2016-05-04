@@ -4,7 +4,7 @@ services:
   seed:
     container_name: seed1
     hostname: seed
-    image: p4km9y/karaf-cellar-docker
+    image: karaf-cellar-docker
     volumes:
       - ./deploy:/opt/deploy
     environment:
@@ -12,7 +12,7 @@ services:
   member:
     container_name: member1
     hostname: member
-    image: p4km9y/karaf-cellar-docker
+    image: karaf-cellar-docker
     volumes:
       - ./deploy:/opt/deploy
     depends_on:
