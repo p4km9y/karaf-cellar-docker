@@ -1,4 +1,4 @@
-FROM karaf-docker
+FROM p4km9y/karaf-docker
 MAINTAINER p4km9y
 
 RUN sed -i 's/^\(featuresRepositories\s*=\s*\).*$/\1mvn:org.apache.karaf.cellar\/apache-karaf-cellar\/LATEST\/xml\/features, \\/' /opt/karaf/etc/org.apache.karaf.features.cfg; \
